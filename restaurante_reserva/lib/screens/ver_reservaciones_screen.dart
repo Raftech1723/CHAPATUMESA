@@ -25,7 +25,7 @@ class VerReservacionesScreen extends StatelessWidget {
                 final reservacion = snapshot.data![index];
                 return ListTile(
                   title: Text(reservacion.restaurante),
-                  subtitle: Text('Nombre: ${reservacion.nombre} - Mesa: ${reservacion.tipomesa} - Celular: ${reservacion.celular} - Correo: ${reservacion.correo} - Fecha: ${reservacion.fecha} -Hora: ${reservacion.hora}' ),
+                  subtitle: Text('Nombre: ${reservacion.nombre} - Mesa: ${reservacion.tipomesa} - Celular: ${reservacion.celular} - Correo: ${reservacion.correo} - Precio: ${reservacion.precio} - Fecha: ${reservacion.fecha} -Hora: ${reservacion.hora}' ),
                 );
               },
             );
