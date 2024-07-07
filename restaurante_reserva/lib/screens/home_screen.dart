@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'reservaciones_screen.dart';
+import 'package:restaurante_reserva/screens/ver_reservaciones_screen.dart';
+
 import 'horarios_screen.dart';
 import 'reportes_screen.dart';
-import 'package:restaurante_reserva/screens/ver_reservaciones_screen.dart';
+import 'reservaciones_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
