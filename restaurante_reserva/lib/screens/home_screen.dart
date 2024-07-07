@@ -15,7 +15,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bienvenido, CHAPATUMESA'),
+        title: Text(
+          'BIENVENIDO, CHAPATUMESA',
+          style: TextStyle(color: Color.fromARGB(255, 192, 33, 33)),
+        ),
         actions: [
           IconButton(
             icon: Icon(Icons.menu),
