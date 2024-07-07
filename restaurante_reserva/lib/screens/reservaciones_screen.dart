@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:restaurante_reserva/models/Restaurante.dart';
 import 'confirmation_screen.dart';
@@ -292,3 +291,4 @@ class CustomDropdown extends StatelessWidget {
     );
   }
 }
+
