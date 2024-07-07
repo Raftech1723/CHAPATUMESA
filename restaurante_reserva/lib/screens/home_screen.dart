@@ -35,22 +35,22 @@ class _HomeScreenState extends State<HomeScreen> {
         crossAxisCount: 2,
         padding: EdgeInsets.all(16.0),
         children: [
-          _buildMenuItem(Icons.bar_chart, 'Reportes', () {
+          _buildMenuItem(Icons.bar_chart, 'Reportes', Colors.blue, () {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => ReportesScreen()),
             );
           }),
-          _buildMenuItem(Icons.restaurant, 'Reservaciones', () {
+          _buildMenuItem(Icons.restaurant, 'Reservaciones', Colors.green, () {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => VerReservacionesScreen()),
             );
           }),
-          _buildMenuItem(Icons.card_giftcard, 'Canjear Cupones', () {
+          _buildMenuItem(Icons.card_giftcard, 'Canjear Cupones', Colors.orange, () {
             // Navegar a la pantalla de Canjear Cupones
           }),
-          _buildMenuItem(Icons.schedule, 'Horarios', () {
+          _buildMenuItem(Icons.schedule, 'Horarios', Colors.purple, () {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => HorariosScreen()),
@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget _buildMenuItem(IconData icon, String title, VoidCallback onTap) {
+  Widget _buildMenuItem(IconData icon, String title, Color color, VoidCallback onTap) {
     return Card(
       elevation: 4.0,
       child: InkWell(
@@ -69,7 +69,14 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, size: 48.0),
+            Container(
+              decoration: BoxDecoration(
+                color: color,
+                shape: BoxShape.circle,
+              ),
+              padding: EdgeInsets.all(16.0),
+              child: Icon(icon, size: 48.0, color: Colors.white),
+            ),
             SizedBox(height: 16.0),
             Text(title, style: TextStyle(fontSize: 18.0)),
           ],
